@@ -20,11 +20,13 @@
             <ul class="recipes">
                 <?php foreach ($recipes as $recipe): ?>
                     <li onclick="console.log(<?php echo $recipe['title'] ?>)">
-                        <img class="miniature" src="<?php echo $recipe['miniature']['image'] ?>"
-                            alt="<?php echo $recipe['miniature']['description'] ?>" />
-                        <h3><?php echo $recipe['title'] ?></h3>
-                        <p><?php echo $recipe['description'] ?></p>
-                        <?php echo $recipe['author'] ?>
+                        <a href="details_article.php?id=<?php echo urlencode($recipe['title']); ?>">
+                            <img class="miniature" src="<?php echo $recipe['miniature']['image'] ?>"
+                                alt="<?php echo $recipe['miniature']['description'] ?>" />
+                            <h3><?php echo $recipe['title'] ?></h3>
+                            <p><?php echo $recipe['description'] ?></p>
+                            <?php echo $recipe['author'] ?>
+                        </a>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -58,10 +60,12 @@
         flex-wrap: wrap;
         list-style-type: none;
     }
-    ul.recipes li{
+
+    ul.recipes li {
         margin-bottom: 5%;
     }
-    ul.recipes img{
+
+    ul.recipes img {
         max-width: 5vw;
         max-height: 5vw;
     }

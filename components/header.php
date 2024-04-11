@@ -1,12 +1,15 @@
+<?php require_once (__DIR__ . '../../settings/functions.php'); ?>
+<?php require_once (__DIR__ . '../../settings/variables.php'); ?>
+
 <header>
     <h1>Header</h1>
-    <nav>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <a href="./article_create.php">Creer un article</a>
+    <a href="./index.php">accueil</a>
+    <?php if($TheUser === 'none'): ?>
+        <a href="./account/auth.php">connexion</a>
+    <?php else: ?>
+        <a href="#"><?php $TheUser ?></a>
+    <?php endif; ?>
 </header>
 
 <style>
