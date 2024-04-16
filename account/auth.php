@@ -9,6 +9,7 @@
     <?php require_once (__DIR__ . '../../settings/functions.php'); ?>
     <?php require_once (__DIR__ . '../../settings/variables.php'); ?>
 
+    <?php require_once (__DIR__ . '../../components/header.php'); ?>
     <h1>Se connecter</h1>
     <form action="#" method="post" >
         <input type="text" name="name" id="name" placeholder="nom" >
@@ -21,11 +22,12 @@
 
 <?php
 
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST["name"]);
     $password = htmlspecialchars($_POST["password"]);
-
-    // Validation du nom d'utilisateur et du mot de passe
+    
     if (strlen($name) < 2 || strlen($password) < 8) {
         echo "Nom d'utilisateur ou mot de passe invalide.";
     } else {
@@ -35,13 +37,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach($users as $user ){
         if ($user['username'] === $name && $user['password'] === $password){
             echo "Bienvenue" . $user['username'];
-            $TheUser['username'] = $user['username'];
+            $_SESSION['theUser'] = $user['username'];
+            // $TheUser['username'] = $user['username'];
             echo 'print var TheUser' . $TheUser['username'];
+            header("Location: ../index.php");
+            exit;
+            // J'ai toujours de sacré soucis avec les chemins !
         }
     }
-    
-
 }
-
-
 ?>

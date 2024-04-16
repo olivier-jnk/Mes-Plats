@@ -1,15 +1,15 @@
 <?php
 
-$TheUser = [
-    'username' => 'none',
-];
+// $TheUser = [
+//     'username' => 'none',
+// ];
 
 $users =
 [
     [
         'username' => 'anna',
         'email' => 'anna@example.com',
-        'password' => 'SecurePwd123'
+        'password' => 'Test'
     ],
     [
         'username' => 'maria',

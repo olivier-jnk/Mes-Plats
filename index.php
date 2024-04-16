@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
     <?php require_once (__DIR__ . '/settings/functions.php'); ?>
     <?php require_once (__DIR__ . '/settings/variables.php'); ?>
@@ -34,9 +33,7 @@
     </main>
     <?php require_once (__DIR__ . '/components/footer.php'); ?>
 </body>
-
 </html>
-
 <style>
     body {
         margin: 0;
@@ -46,29 +43,25 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
+    };
     main {
         max-width: 40vw;
         min-width: 40vw;
         margin: 2%;
-    }
-
+    };
     ul.recipes {
         display: flex;
         gap: 5%;
         flex-wrap: wrap;
         list-style-type: none;
-    }
-
+    };
     ul.recipes li {
         margin-bottom: 5%;
-    }
-
+    };
     ul.recipes img {
         max-width: 5vw;
         max-height: 5vw;
-    }
+    };
 </style>
 
 <!-- Utiliser Sass et/ou tailwind + React ??? -->

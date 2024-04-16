@@ -5,6 +5,7 @@ require_once (__DIR__ . '/settings/functions.php');
 require_once (__DIR__ . '/settings/variables.php');
 
 if(isset($_POST["submit"])){
+    // Infliger un meilleur traitement.
     $titre = $_POST["titre"];
     $contenu = $_POST["contenu"];
     $image = $_FILES["image"]["name"];
