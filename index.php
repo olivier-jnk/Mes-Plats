@@ -63,6 +63,3 @@
         max-height: 5vw;
     };
 </style>
-
-<!-- Utiliser Sass et/ou tailwind + React ??? -->
-<!-- Revoir les différents modes d'appel de classe css element.element ou element .element + nth-shild, ... -->

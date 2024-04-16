@@ -1,9 +1,5 @@
 <?php
 
-// $TheUser = [
-//     'username' => 'none',
-// ];
-
 $users =
 [
     [

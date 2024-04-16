@@ -42,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo 'print var TheUser' . $TheUser['username'];
             header("Location: ../index.php");
             exit;
-            // J'ai toujours de sacré soucis avec les chemins !
         }
     }
 }

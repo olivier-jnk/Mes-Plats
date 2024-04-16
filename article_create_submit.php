@@ -5,7 +5,7 @@ require_once (__DIR__ . '/settings/functions.php');
 require_once (__DIR__ . '/settings/variables.php');
 
 if(isset($_POST["submit"])){
-    // Infliger un meilleur traitement.
+    // Meilleur traitement des données !
     $titre = $_POST["titre"];
     $contenu = $_POST["contenu"];
     $image = $_FILES["image"]["name"];
@@ -41,7 +41,6 @@ if(isset($_POST["submit"])){
     ];
 
     // Ajouter l'article au tableau global
-    // array_push prend en premier paramètre l'array et en secon, ce qu'il push dedans.
     array_push($recipes, $newArticle);
 
     echo "<h2>Articles ajoutés :</h2>";
@@ -69,4 +68,3 @@ if(isset($_POST["submit"])){
 <body>
 </body>
 </html>
-

@@ -14,8 +14,6 @@
     <!-- Ajouter un possible reset de session. -->
     <a href="./docs_creator/doc_create.php">Document creator</a>
 </header>
-<!-- La session ne persiste pas au refresh... -->
-
 <style>
     header {
         background-color: #333;
