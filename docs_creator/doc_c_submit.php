@@ -29,6 +29,3 @@ if (!mkdir($new_folder_path)){
 }else{
     echo "Sous dossier pour les pièces-jointes créer avec succès !";
 }
-
-// mini-pause Encore 5min puis push et recap ggDoc, puis ciao.
-//-> ca passe drolement vite quand je suis à fond dans mon code.
